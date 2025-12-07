@@ -32,14 +32,20 @@ heatmap<-ggplot(titanic, aes(x=Pclass, y=Survived))+
   theme_minimal()
 print(heatmap)
 
-interactive_bar_char <- ggplotly(bar_char)
+interactive_bar_char <- ggplotly(bar_graph)
 interactive_line_graph <- ggplotly(line_graph)
 interactive_scatter_plot <- ggplotly(scatter_plot) 
 interactive_heatmap <- ggplotly(heatmap)
+
+print(interactive_bar_char)
+print(interactive_line_graph)
+print(interactive_scatter_plot)
+print(interactive_heatmap)
 
 ggsave("bar_plot.png", plot = bar_char, width = 8, height = 6) 
 ggsave("line_plot.png", plot = line_graph, width = 8, height = 6)
 ggsave("scatter_plot.png", plot = scatter_plot, width = 8, height = 6)
 ggsave("titanic_heatmap_ggplot.png", heatmap, width = 8, height = 6) 
   
+
   
